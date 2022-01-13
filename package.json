@@ -1,5 +1,6 @@
 {
-  "name": "https://okuhlem.github.io/OkuhleM/Distance-to-time-calculator",
+  "homepage": "https://okuhlem.github.io/OkuhleM/new/distance",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
