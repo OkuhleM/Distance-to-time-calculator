@@ -12,11 +12,13 @@ code {
     monospace;
 }
 
-.time{
-  text-align: center;
-  margin-top: 2rem;
-}
 
 input {
 padding: 1rem;
+width: 18rem;
+margin-top: 2rem;
+}
+
+hr{
+  width: 18%;
 }
