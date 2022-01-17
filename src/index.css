@@ -17,8 +17,16 @@ input {
 padding: 1rem;
 width: 18rem;
 margin-top: 2rem;
+margin-right: 3rem;
 }
 
-hr{
-  width: 18%;
-}
+
+ /* p{
+ 
+   border: 2px solid forestgreen;
+   margin: 3rem 34rem;
+   padding: 1rem 2rem;
+   background-color: rgb(226, 252, 184);
+   font-weight: bold;
+   color: black;
+ } */

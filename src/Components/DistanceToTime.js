@@ -10,19 +10,37 @@ export default function DistanceToTime() {
 
     const updateDstanceValue = e => setDistance({
         value: e.target.value,
-        walking: ((+e.target.value * 60) / averageSpeedWhenWalking).toFixed(1),
-        driving: ((+e.target.value * 60) / averageSpeedWhenDriving).toFixed(1),
-        flying: ((+e.target.value * 60) / averageSpeedWhenFlying).toFixed(1)
+        walking: ((+e.target.value * 60) / averageSpeedWhenWalking).toFixed(0),
+        driving: ((+e.target.value * 60) / averageSpeedWhenDriving).toFixed(0),
+        flying: ((+e.target.value * 60) / averageSpeedWhenFlying).toFixed(0),
+        
     })
-    
 
+    const convertTime = (n) => {
+        var givenNumber = n;
+        var convertedHours = (givenNumber / 59);
+        var minutes = Math.floor(convertedHours);
+        var minutesToBeReturned = (convertedHours - minutes) * 60;
+        var convertedMinutes = Math.round(minutesToBeReturned);
+        return convertedMinutes + " hours and " +  givenNumber+ " minutes";
+    }
+
+    // function timeConvert(n) {
+    //     var num = n;
+    //     var hours = (num / 60);
+    //     var rhours = Math.floor(hours);
+    //     var minutes = (hours - rhours) * 60;
+    //     var rminutes = Math.round(minutes);
+    //     return num  + " hour(s) and " + rminutes + " minute(s).";
+    //     }
+        
 
 
     return (
         <div>
             <form className="container">
                 <div>
-                    <h1>Enter The Distance</h1><hr />
+                    <h1>Enter The Distance</h1>
                     <input
                         type="number"
                         value={distance.value}
@@ -31,12 +49,15 @@ export default function DistanceToTime() {
                     </input>
                 </div>
             </form>
+<div>
+            <h2>Distance When Walking:</h2>
+            <p>{convertTime(distance.walking)}</p>
+            <h2>Distance When Driving:</h2>
+            <p>{convertTime(distance.driving)}</p>
+            <h2>Distance When Using A Flight:</h2>
+            <p>{convertTime(distance.flying)}</p>
 
-            <p>{distance.walking}</p>
-            <p>{distance.driving}</p>
-            <p>{distance.flying}</p>
-
-
+            </div>
            
         </div>
     )

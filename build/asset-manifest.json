@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Distance-to-time-calculator/static/css/main.3e915cae.css",
+    "main.js": "/Distance-to-time-calculator/static/js/main.72219e9b.js",
+    "static/js/787.edd59a96.chunk.js": "/Distance-to-time-calculator/static/js/787.edd59a96.chunk.js",
+    "index.html": "/Distance-to-time-calculator/index.html",
+    "main.3e915cae.css.map": "/Distance-to-time-calculator/static/css/main.3e915cae.css.map",
+    "main.72219e9b.js.map": "/Distance-to-time-calculator/static/js/main.72219e9b.js.map",
+    "787.edd59a96.chunk.js.map": "/Distance-to-time-calculator/static/js/787.edd59a96.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e915cae.css",
+    "static/js/main.72219e9b.js"
+  ]
+}
