@@ -18,11 +18,11 @@ export default function DistanceToTime() {
 
     const convertTime = (n) => {
         var givenNumber = n;
-        var convertedHours = (givenNumber / 59);
-        var minutes = Math.floor(convertedHours);
-        var minutesToBeReturned = (convertedHours - minutes) * 60;
+        var convertedHours = (givenNumber / 60);
+        var minutes = Math.floor(givenNumber / 60);
+        var minutesToBeReturned = ((convertedHours - minutes) / 60).toFixed(0);
         var convertedMinutes = Math.round(minutesToBeReturned);
-        return convertedMinutes + " hours and " +  givenNumber+ " minutes";
+        return minutes + " hour(s) and " +  minutesToBeReturned   + " minutes";
     }
 
     // function timeConvert(n) {
@@ -40,13 +40,14 @@ export default function DistanceToTime() {
         <div>
             <form className="container">
                 <div>
-                    <h1>Enter The Distance</h1>
+                    <h1>Enter The Distance In Km</h1>
                     <input
                         type="number"
                         value={distance.value}
                         onChange={(e) =>updateDstanceValue(e)}
                     >
                     </input>
+                   
                 </div>
             </form>
 <div>
