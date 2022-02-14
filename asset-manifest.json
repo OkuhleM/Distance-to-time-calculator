@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Distance-to-time-calculator/static/css/main.004d9cd3.css",
-    "main.js": "/Distance-to-time-calculator/static/js/main.96799a2d.js",
+    "main.css": "/Distance-to-time-calculator/static/css/main.8186c3db.css",
+    "main.js": "/Distance-to-time-calculator/static/js/main.38f3402f.js",
     "static/js/787.edd59a96.chunk.js": "/Distance-to-time-calculator/static/js/787.edd59a96.chunk.js",
     "index.html": "/Distance-to-time-calculator/index.html",
-    "main.004d9cd3.css.map": "/Distance-to-time-calculator/static/css/main.004d9cd3.css.map",
-    "main.96799a2d.js.map": "/Distance-to-time-calculator/static/js/main.96799a2d.js.map",
+    "main.8186c3db.css.map": "/Distance-to-time-calculator/static/css/main.8186c3db.css.map",
+    "main.38f3402f.js.map": "/Distance-to-time-calculator/static/js/main.38f3402f.js.map",
     "787.edd59a96.chunk.js.map": "/Distance-to-time-calculator/static/js/787.edd59a96.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.004d9cd3.css",
-    "static/js/main.96799a2d.js"
+    "static/css/main.8186c3db.css",
+    "static/js/main.38f3402f.js"
   ]
 }
