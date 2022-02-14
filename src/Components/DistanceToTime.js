@@ -10,30 +10,39 @@ export default function DistanceToTime() {
 
     const updateDstanceValue = e => setDistance({
         value: e.target.value,
-        walking: ((+e.target.value * 60) / averageSpeedWhenWalking).toFixed(0),
-        driving: ((+e.target.value * 60) / averageSpeedWhenDriving).toFixed(0),
-        flying: ((+e.target.value * 60) / averageSpeedWhenFlying).toFixed(0),
+        walking: ((+e.target.value * 60) / averageSpeedWhenWalking) ,
+        driving: ((+e.target.value * 60) / averageSpeedWhenDriving),
+        flying: ((+e.target.value * 60) / averageSpeedWhenFlying),
         
     })
 
-    const convertTime = (n) => {
-        var givenNumber = n;
-        var convertedHours = (givenNumber / 60);
-        var minutes = Math.floor(givenNumber / 60);
-        var minutesToBeReturned = ((convertedHours - minutes) / 60).toFixed(0);
-        var convertedMinutes = Math.round(minutesToBeReturned);
-        return minutes + " hour(s) and " +  minutesToBeReturned   + " minutes";
+
+// var distancwhene = Number(n);
+const distanceWhenWalking =()=>{
+    var whour = (distance.walking - distance.walking % 60 ) / 60;
+    var wminutes = distance.walking % 60;
+    var wseconds = wminutes / 60;
+    
+        console.log("walking", `hours :${whour.toFixed(0)}, min :${wminutes.toFixed(0)}, sec: ${wseconds.toFixed(0)} `);
+        return `hours :${whour.toFixed(0)}, min :${wminutes.toFixed(0)}, sec: ${wseconds.toFixed(0)} `
+}
+    const distanceWhenDriving = () =>{
+    var dhour = (distance.driving - distance.driving % 60 ) / 60;
+    var dminutes = distance.driving % 60;
+    var dseconds = dminutes / 60;
+    
+    console.log("driving", `hours :${dhour.toFixed(0)}, min :${dminutes.toFixed(0)}, sec: ${dseconds.toFixed(0)} `);
+    return  `hours :${dhour.toFixed(0)}, min :${dminutes.toFixed(0)}, sec: ${dseconds.toFixed(0)} `
     }
 
-    // function timeConvert(n) {
-    //     var num = n;
-    //     var hours = (num / 60);
-    //     var rhours = Math.floor(hours);
-    //     var minutes = (hours - rhours) * 60;
-    //     var rminutes = Math.round(minutes);
-    //     return num  + " hour(s) and " + rminutes + " minute(s).";
-    //     }
-        
+    const distanceWhenUsingAflight = ()=>{
+    var fhour = (distance.flying - distance.flying % 60 ) / 60;
+    var fminutes = distance.flying % 60;
+    var fseconds = fminutes/60;
+    
+    console.log("flight", `hours :${fhour.toFixed(0)}, min :${fminutes.toFixed(0)}, sec: ${fseconds.toFixed(0)} `);
+    return `hours :${fhour.toFixed(0)}, min :${fminutes.toFixed(0)}, sec: ${fseconds.toFixed(0)} `
+    }
 
 
     return (
@@ -52,11 +61,11 @@ export default function DistanceToTime() {
             </form>
 <div>
             <h2>Distance When Walking:</h2>
-            <p>{convertTime(distance.walking)}</p>
+            <p>{distanceWhenWalking(distance.walking)}</p>
             <h2>Distance When Driving:</h2>
-            <p>{convertTime(distance.driving)}</p>
+            <p>{distanceWhenDriving(distance.driving)}</p>
             <h2>Distance When Using A Flight:</h2>
-            <p>{convertTime(distance.flying)}</p>
+            <p>{distanceWhenUsingAflight(distance.flying)}</p>
 
             </div>
            
